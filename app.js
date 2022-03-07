@@ -31,3 +31,22 @@ const inOurTeam = [
         foto: 'barbara-ramos-graphic-designer.jpg'
     }
 ];
+
+for (let i = 0; i < inOurTeam.length; i++) {
+    let card = document.createElement('div')
+    card.classList.add('team-card');
+    let personName = inOurTeam[i]['nome']
+    let personRole = inOurTeam[i]['ruolo']
+    let personPhoto = inOurTeam[i]['foto']
+    card.innerHTML = `
+        <div class="card-image">
+            <img src="img/${personPhoto}"/>
+        </div>
+        <div class="card-text">
+            <h3>${personName}</h3>
+            <p>${personRole}</p>
+        </div>`
+
+    teamContainer.appendChild(card);
+}
+    
